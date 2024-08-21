@@ -1,8 +1,8 @@
-import { OUR_CLIENTS } from "@/lib/constant";
+import { OUR_CLIENTS } from "@/lib/clientLogos";
 import Image from "next/image";
 import React from "react";
 
-const OurClients = () => {
+const ClientSection = () => {
   return (
     <div className="container py-10">
       <div className="text-center">
@@ -14,7 +14,7 @@ const OurClients = () => {
         </p>
       </div>
       <div className="relative overflow-hidden">
-        <div className="mt-4 flex gap-28 animate-[scroll_10s_linear_infinite]">
+        <div className="mt-4 flex gap-28 animate-[scroll_20s_linear_infinite]">
           {OUR_CLIENTS.map((item, index) => (
             <Image
               key={index}
@@ -48,4 +48,4 @@ const OurClients = () => {
   );
 };
 
-export default OurClients;
+export default ClientSection;

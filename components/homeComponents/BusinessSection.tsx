@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const HelpingBusiness = () => {
+const BusinessSection = () => {
   return (
     <div className="bg-natural-Silver my-12">
       <div className="container flex flex-wrap items-center">
@@ -81,4 +81,4 @@ const HelpingBusiness = () => {
   );
 };
 
-export default HelpingBusiness;
+export default BusinessSection;

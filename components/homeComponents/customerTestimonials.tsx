@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import RightArrowComponent from "../theme/icons/rightArrowComponent";
 
-const Customers = () => {
+const CustomerTestimonials = () => {
   return (
     <div className="bg-natural-Silver my-12 py-8">
       <div className="container flex flex-wrap items-center">
@@ -84,4 +84,4 @@ const Customers = () => {
   );
 };
 
-export default Customers;
+export default CustomerTestimonials;

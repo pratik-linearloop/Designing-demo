@@ -7,7 +7,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const BannerSlider = () => {
+const HeroCarousel = () => {
   return (
     <>
       <div>
@@ -52,4 +52,5 @@ const BannerSlider = () => {
   );
 };
 
-export default BannerSlider;
+export default HeroCarousel;
+

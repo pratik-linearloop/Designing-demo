@@ -16,7 +16,7 @@ const Marketing = () => {
           more.​
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-10 md:gap-y-24 xl:gap-0 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-10 md:gap-y-24 xl:gap-8 mt-4">
         <div className="relative">
           <Image
             src="/images/image 18.png"

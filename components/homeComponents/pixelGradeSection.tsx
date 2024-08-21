@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 
-const PixelGrade = () => {
+const PixelGradeSection = () => {
   return (
     <div className="container">
       <div className="flex flex-wrap md:flex-nowrap gap-3 items-center">
@@ -33,4 +33,4 @@ const PixelGrade = () => {
   );
 };
 
-export default PixelGrade;
+export default PixelGradeSection;

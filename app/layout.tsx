@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
-import Header from "./_components/header";
-import MobileHeader from "./_components/mobileHeader";
-import Footer from "./_components/footer";
+import Header from "../components/navBar";
+import MobileHeader from "../components/mobileNavbar";
+import Footer from "../components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Nexcent",
-  description: "Develop by Akash",
+  description: "Developed by Pratik",
 };
 
 export default function RootLayout({
