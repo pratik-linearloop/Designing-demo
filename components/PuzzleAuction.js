@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react'
 import { 
   Box, VStack, HStack, Text, Button, NumberInput, NumberInputField, 
   NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper,
-  useToast,
-  Flex
+  useToast, Flex, Heading, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon
 } from '@chakra-ui/react'
 import PuzzleVisualization from './PuzzleVisualization'
 
@@ -177,14 +176,13 @@ export default function PuzzleAuction() {
               </NumberInput>
             </HStack>
             <Flex justifyContent="space-between" width="100%" marginTop={2}>
-            <Button onClick={handleAuction} colorScheme="blue" width="40%">
-              Complete Auction
-            </Button>
-            <Button onClick={resetGame} colorScheme="red">
-              Reset Game
-            </Button>
+              <Button onClick={handleAuction} colorScheme="blue" width="40%">
+                Complete Auction
+              </Button>
+              <Button onClick={resetGame} colorScheme="red">
+                Reset Game
+              </Button>
             </Flex>
-            
           </VStack>
           <Box>
             <Text fontSize="xl" mb={2}>Puzzle Progress</Text>
@@ -192,6 +190,34 @@ export default function PuzzleAuction() {
           </Box>
         </HStack>
       </VStack>
+      
+      {/* Add the learning objectives section */}
+      <Box my={32}>
+        <Accordion allowToggle>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontWeight="bold" fontSize="2xl">
+                  What can you learn from this game?
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <VStack align="start" spacing={4}>
+                <Text fontSize="lg">This Puzzle Auction Game teaches several key concepts:</Text>
+                <Text fontSize="lg">1. Resource Management: Players must balance their currency to bid on pieces strategically.</Text>
+                <Text fontSize="lg">2. Decision Making: Choosing which pieces to bid on and how much to bid requires critical thinking.</Text>
+                <Text fontSize="lg">3. Risk Assessment: Players must evaluate the potential value of each piece against its cost.</Text>
+                <Text fontSize="lg">4. Competitive Strategy: Understanding and reacting to other teams' actions is crucial for success.</Text>
+                <Text fontSize="lg">5. Collaboration: Within teams, players must work together to make optimal decisions.</Text>
+                <Text fontSize="lg">6. Pattern Recognition: Identifying valuable piece combinations can lead to higher scores.</Text>
+                <Text fontSize="lg">7. Adaptability: As the game progresses, strategies may need to change based on available pieces and resources.</Text>
+              </VStack>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </Box>
     </Box>
   )
 }
