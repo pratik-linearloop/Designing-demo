@@ -209,7 +209,7 @@ export default function PuzzleAuction() {
                 <Text fontSize="lg">1. Resource Management: Players must balance their currency to bid on pieces strategically.</Text>
                 <Text fontSize="lg">2. Decision Making: Choosing which pieces to bid on and how much to bid requires critical thinking.</Text>
                 <Text fontSize="lg">3. Risk Assessment: Players must evaluate the potential value of each piece against its cost.</Text>
-                <Text fontSize="lg">4. Competitive Strategy: Understanding and reacting to other teams' actions is crucial for success.</Text>
+                <Text fontSize="lg">4. Competitive Strategy: Understanding and reacting to other teams&apos; actions is crucial for success.</Text>
                 <Text fontSize="lg">5. Collaboration: Within teams, players must work together to make optimal decisions.</Text>
                 <Text fontSize="lg">6. Pattern Recognition: Identifying valuable piece combinations can lead to higher scores.</Text>
                 <Text fontSize="lg">7. Adaptability: As the game progresses, strategies may need to change based on available pieces and resources.</Text>
