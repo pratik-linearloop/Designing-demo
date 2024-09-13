@@ -10,8 +10,8 @@ import {
 import PuzzleVisualization from './PuzzleVisualization'
 
 const INITIAL_CURRENCY = 1000
-const TOTAL_PIECES = 25
-const GRID_SIZE = 5
+const TOTAL_PIECES = 9
+const GRID_SIZE = 3
 
 const initialTeams = [
     { name: 'Google Devs', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
