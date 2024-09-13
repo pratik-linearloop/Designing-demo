@@ -15,7 +15,7 @@ export default function PuzzleVisualization({ pieces, teams }) {
 
   return (
     <Box borderWidth={2} borderColor="gray.300" p={2} position="relative">
-      <Image src={imageSrc} alt="Puzzle" opacity={0.3} position="absolute" top={0} left={0} width="100%" height="100%" />
+      <Image src={imageSrc} alt="Puzzle" opacity={0.5} position="absolute" top={0} left={0} width="100%" height="100%" />
       <SimpleGrid columns={GRID_SIZE} spacing={1}>
         {pieces.map((piece) => (
           <Box

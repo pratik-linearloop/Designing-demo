@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 import { 
   Box, VStack, HStack, Text, Button, NumberInput, NumberInputField, 
   NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper,
-  useToast
+  useToast,
+  Flex
 } from '@chakra-ui/react'
 import PuzzleVisualization from './PuzzleVisualization'
 
@@ -13,12 +14,12 @@ const TOTAL_PIECES = 25
 const GRID_SIZE = 5
 
 const initialTeams = [
-  { name: 'Team 1', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
-  { name: 'Team 2', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
-  { name: 'Team 3', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
-  { name: 'Team 4', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
-  { name: 'Team 5', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
-  { name: 'Team 6', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
+    { name: 'Google Devs', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
+    { name: 'Microsoft Coders', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
+    { name: 'Apple Engineers', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
+    { name: 'Amazon Builders', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
+    { name: 'Facebook Hackers', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
+    { name: 'Tesla Innovators', pieces: 0, currency: INITIAL_CURRENCY, score: 0 },
 ]
 
 export default function PuzzleAuction() {
@@ -139,16 +140,16 @@ export default function PuzzleAuction() {
         <HStack spacing={10} align="flex-start">
           <VStack align="stretch" flex={1}>
             {currentPiece && (
-              <Box borderWidth={1} p={3} borderRadius="md">
-                <Text fontWeight="bold">Current Piece</Text>
-                <Text>ID: {currentPiece.id}</Text>
-                <Text>Value: {currentPiece.value}</Text>
+              <Box borderWidth={2} p={4} borderRadius="lg" bg="blue.100" shadow="md">
+                <Text fontSize="lg" fontWeight="bold" mb={2}>Current Piece Details</Text>
+                {/* <Text>ID: <strong>{currentPiece.id}</strong></Text> */}
+                <Text fontSize="48px">Value: <strong>{currentPiece.value}</strong></Text>
               </Box>
             )}
             <VStack align="stretch">
               {teams.map((team, index) => (
                 <HStack key={index} justify="space-between">
-                  <Text color={`team${index + 1}.500`} fontWeight="bold">{team.name}</Text>
+                  <Text color={`team${index + 1}.500`} fontWeight="bold" width="150px">{team.name}</Text>
                   <Text>Pieces: {team.pieces}</Text>
                   <Text>Currency: ${team.currency}</Text>
                   <Text>Score: {team.score}</Text>
@@ -175,12 +176,15 @@ export default function PuzzleAuction() {
                 </NumberInputStepper>
               </NumberInput>
             </HStack>
-            <Button onClick={handleAuction} colorScheme="blue">
+            <Flex justifyContent="space-between" width="100%" marginTop={2}>
+            <Button onClick={handleAuction} colorScheme="blue" width="40%">
               Complete Auction
             </Button>
             <Button onClick={resetGame} colorScheme="red">
               Reset Game
             </Button>
+            </Flex>
+            
           </VStack>
           <Box>
             <Text fontSize="xl" mb={2}>Puzzle Progress</Text>
