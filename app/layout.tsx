@@ -1,37 +1,24 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.scss";
-import Header from "../components/navBar";
-import MobileHeader from "../components/mobileNavbar";
-import Footer from "../components/footer";
+'use client'
 
-const inter = Inter({ subsets: ["latin"] });
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
-export const metadata: Metadata = {
-  title: "Nexcent",
-  description: "Developed by Pratik",
-};
+const theme = extendTheme({
+  colors: {
+    team1: { 500: '#FF6B6B' },
+    team2: { 500: '#4ECDC4' },
+    team3: { 500: '#45B7D1' },
+    team4: { 500: '#F7B801' },
+    team5: { 500: '#9B59B6' },
+    team6: { 500: '#5D5D5D' },
+  },
+})
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/images/logo.svg" sizes="any" />
-      </head>
-      <body className={inter.className}>
-        <div className="hidden lg:block">
-          <Header />
-        </div>
-        <div className="block lg:hidden">
-          <MobileHeader />
-        </div>
-        {children}
-        <Footer />
+      <body>
+        <ChakraProvider theme={theme}>{children}</ChakraProvider>
       </body>
     </html>
-  );
+  )
 }
